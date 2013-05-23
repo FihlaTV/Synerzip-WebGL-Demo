@@ -7,7 +7,18 @@
 </head>
 <body>
 <h1>Synerzip WebGl 3d Model Rendering Demo</h1>
-
+<p>
+    This is a demo of loading and displaying blender 3d files in browser using WebGL.
+</p>
+<p>
+    Here are the steps taken to run the blender 3d model in Browser
+    <ul>
+        <li>Take the <a href="models/bike.blend" target="_blank">bike.blend</a> and load it up in Blender 3D</li>
+        <li>Export the blendr 3d files to x3d model</li>
+        <li>Load the x3d file using X3Dom. View Source of this page to know how.</li>
+    </ul>
+</p>
+<hr/>
 <x3d id='model2' showStat='false' showLog='false' x='0px' y='0px' width='800px' height='800px'>
     <scene>
         <inline url='models/bike.x3d'></inline>
