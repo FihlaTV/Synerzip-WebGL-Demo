@@ -78,9 +78,9 @@ WellBoreSchematicsApp.prototype.init = function(param)
     this.addObject(wellCasing);
 
     // Move the camera back so we can see our Moon
-    this.camera.rotation.x = 45 * (Math.PI / 180);
-    this.camera.position.y = -450;
-    this.camera.position.z = 400;
+    this.camera.rotation.x = 60 * (Math.PI / 180);
+    this.camera.position.y = -100;
+    this.camera.position.z = 100;
 
 }
 
