@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Synerzip 3D Terrain Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+
+    <script src="js/libs/Three.js"></script>
+    <script src="js/libs/jquery-1.6.4.js"></script>
+    <script src="js/libs/jquery.mousewheel.js"></script>
+    <script src="js/libs/RequestAnimationFrame.js"></script>
+    <script src="js/libs/control/TrackballControls.js"></script>
+    <script src="js/libs/sim.js"></script>
+
+    <script src="js/models/WellBoreTree.js"></script>
+    <script src="js/models/WellCasing.js"></script>
+    <script src="js/models/OilWell.js"></script>
+    <script src="js/models/Terrain.js"></script>
+    <script src="js/models/WellBoreSchematicsApp.js"></script>
+    <script>
+        $(document).ready(
+                function() {
+                    var container = document.getElementById("container");
+                    var app = new WellBoreSchematicsApp();
+                    app.init({ container: container });
+                    app.run();
+                }
+        );
+    </script>
+
+</head>
+<body>
+    <div id="container" style="width:98%; height:98%; overflow:hidden; position:absolute;"></div>
+
+</body>
+</html>
+

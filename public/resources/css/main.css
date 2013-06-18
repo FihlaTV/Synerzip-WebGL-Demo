@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'AveriaGruesaLibre-Regular';
+    src: url('/resources/fonts/Averia_Gruesa_Libre/AveriaGruesaLibre-Regular.ttf'); /* Cool browsers */
+}
+@font-face {
+    font-family: 'MarckScript-Regular';
+    src: url('/resources/fonts/Marck_Script/MarckScript-Regular.ttf'); /* Cool browsers */
+}
+@font-face {
+    font-family: 'Merienda-Regular';
+    src: url('/resources/fonts/Merienda/Merienda-Regular.ttf'); /* Cool browsers */
+}
+@font-face {
+    font-family: 'Merienda-Bold';
+    src: url('/resources/fonts/Merienda/Merienda-Bold.ttf'); /* Cool browsers */
+}
+@font-face {
+    font-family: 'SofadiOne-Regular';
+    src: url('/resources/fonts/Sofadi_One/SofadiOne-Regular.ttf'); /* Cool browsers */
+}
+@font-face {
+    font-family: 'TenorSans-Regular';
+    src: url('/resources/fonts/Tenor_Sans/TenorSans-Regular.ttf'); /* Cool browsers */
+}
+
+
+body{
+    font-family: TenorSans-Regular;
+    background: #FDDC76;
+    padding:20px;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:275px;
+    height:46px;
+}
+
+.container{
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #EFEFEF;
+    padding:20px;
+
+}
+.grid{
+    padding: 2px;
+    width:30%;
+    border-radius:12px;
+    position:static;
+    border: 1px solid black;
+    margin-left:100px;
+}
+.gridRow{
+    border-bottom:1px solid black;
+}
+.gridCol{
+    display: inline;
+    width:20px;
+    font-weight: bold;
+    font-size: 14pt;
+    text-align:center;
+    margin-left:30px;
+}
+.gridCell{
+    display: inline-block;
+    width:120px;
+    margin-left:30px;
+}
+.description{
+    font-family: Calibri;
+    font-size:16px;
+    color: #6495ed;
+
+}
+.header{
+
+}
+
+.content{
+
+}
+
+.topic{
+    border:1px solid red;
+    border-radius:5px;
+    background: yellow;
+    padding:10px;
+}
+
+.code{
+    border:1px solid black;
+    margin:20px;
+    padding:20px;
+    background: white;
+
+}
+
+table.docutils td { padding: 8px; }
+table.docutils>thead th.head {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table.index-table td {
+    text-align: center;
+    border-bottom: none;
+    border-right: 4px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+table.index-table tr.row-even td p {
+    line-height: 1.3em;
+}
+
+
+table.index-table tr.row-odd td {
+    text-align: center;
+    border-bottom: none;
+    border-right: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-height:5px;
+    padding-top: 0px;
+}
+
+table.index-table  {
+    margin: auto;
+    background-color: #F3F4EB;
+}
+
+table.index-table th.head {
+    text-align: center;
+    padding-top:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: none;
+}
+
+.syntax {
+    font-size : 12px;
+    font-family: Merienda-Bold;
+    background: white;
+}
+
+
+.preview{
+    width:150px;
+    height:150px;
+    border-radius: 20px;
+}

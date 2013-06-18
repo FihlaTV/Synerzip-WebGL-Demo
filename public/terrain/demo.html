@@ -1,0 +1,87 @@
+
+<html>
+<head>
+    <title>Getting coordinates in google static maps example</title>
+    <script type="text/javascript">
+        <!--
+        function Adjust(X,Y,x,y,z,w)
+        {
+            var offset=268435456; //(half of the earth circumference's in pixels at zoom level 21)
+            var radius=offset/Math.PI;
+            function LToX(x)
+            {
+                return Math.round(offset+radius*x*Math.PI/180);
+            }
+            function LToY(y)
+            {
+                return Math.round(offset-radius*Math.log((1+Math.sin(y*Math.PI/180))/(1-Math.sin(y*Math.PI/180)))/2);
+            }
+            function XToL(x)
+            {
+                return ((Math.round(x)-offset)/radius)*180/Math.PI;
+            }
+            function YToL(y)
+            {
+                return (Math.PI/2-2*Math.atan(Math.exp((Math.round(y)-offset)/radius)))*180/Math.PI;
+            }
+            if (w)
+            {
+                return {x:(LToX(X)-LToX(x))>>(21-z),y:(LToY(Y)-LToY(y))>>(21-z)};
+            }
+            else
+            {
+                return {x:XToL(LToX(x)+(X<<(21-z))),y:YToL(LToY(y)+(Y<<(21-z)))};
+            }
+        }//function Adjust
+        function XYToLL(X,Y,x,y,z){return Adjust(X,Y,x,y,z,0)}
+        //	X = X pixel offset of new map center from old map center
+        //	Y = Y pixel offset of new map center from old map center
+        //	x = Longitude of map center
+        //	y = Latitude  of map center
+        //	z = Zoom level
+        //	result.x = Longitude of adjusted map center
+        //	result.y = Latitude  of adjusted map center
+        function LLToXY(X,Y,x,y,z){return Adjust(X,Y,x,y,z,1)}
+        //	X = Longitude of marker center
+        //	Y = Latitude  of marker center
+        //	x = Longitude of map center
+        //	y = Latitude  of map center
+        //	z = Zoom level
+        //	result.x = X pixel offset of marker center from map center
+        //	result.y = Y pixel offset of marker center from map center
+        function get_coordinates(event, show_coordinates_div_id){
+            //make the array that the result will be held in
+            var array_result = new Array();
+            //determine the x&y coordinates of the mouse cursor
+            array_result['x'] = event.offsetX?(event.offsetX):event.pageX-document.getElementById('static_map_id').offsetLeft;
+            array_result['y'] = event.offsetY?(event.offsetY):event.pageY-document.getElementById('static_map_id').offsetTop;
+            //calulate the center values for the maps' x & y coordinates
+            var old_map_center_x = 325;
+            var old_map_center_y = 200;
+            //calculate the latitude and longitude
+            array_result.x = (array_result['x'] - old_map_center_x);
+            array_result.y = (array_result['y'] - old_map_center_y);
+            var result = XYToLL(array_result.x,array_result.y,-95.5,38,4);
+            //save the longitude and latitude
+            array_result['longitude'] = result.x;
+            array_result['latitude'] = result.y;
+
+            //do we have the div id to update?
+            if(show_coordinates_div_id){
+                var elemHTML = "{"+array_result['latitude']+","+array_result['longitude']+"}=XYToLL("+array_result.x+","+ array_result.y+",-95.5,38,4)";
+                   //update the div
+                document.getElementById(show_coordinates_div_id).innerHTML=elemHTML;
+                console.dir(elemHTML);
+            }//if
+            return array_result;
+        }//function get_coordinates()
+        -->
+    </script></head>
+<body>
+
+<div >
+    <img src="http://maps.google.com/maps/api/staticmap?center=38,-95.5&amp;zoom=4&amp;size=650x400&amp;maptype=roadmap&amp;sensor=false&amp;key=ABQIAAAA0ghTzUvVIsKmrQiMDG_wLRTdt_a4g0QTnayoEzi8oL4pde9d-BQCWbzUaxU2PI98iukjYbWJa2vndw&amp;format=GIF" width="650" height="400" alt="Find your coordinates -  RockOnScottLong.com" style="cursor:pointer;" id="static_map_id"  onMouseMove="get_coordinates(event, 'show_coordinates_div_id')" />
+</div>
+<br clear="all"><div id="show_coordinates_div_id" >Move your mouse over the map to get the coordinates!</div>
+</body>
+</html>
