@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ccc0c1e-7d30-4890-ba6c-00e029dc843c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js" afterPath="$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="WebGL-Model-Rendering.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +31,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="79" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-6.5454545">
+            <state line="38" column="90" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.33103448">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WellBoreSchematicsApp.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WellBoreSchematicsApp.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="31" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.5872757">
+            <state line="80" column="31" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
       <list>
         <option value="$PROJECT_DIR$/web.js" />
         <option value="$PROJECT_DIR$/public/terrain/index.html" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -389,16 +389,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="79" selection-start="1836" selection-end="1836" vertical-scroll-proportion="-6.5454545">
+        <state line="80" column="31" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/terrain/js/models/WellBoreSchematicsApp.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="31" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.5872757">
+        <state line="38" column="90" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.33103448">
           <folding />
         </state>
       </provider>
