@@ -38,8 +38,8 @@ OilWell.prototype.createOilWell = function()
             transparent:true,
             opacity:0.5
         });
-
-        this.oilPump = new THREE.Mesh(geometry,material);
+        new THREE.MeshFaceMaterial( materials )
+        this.oilPump = new THREE.Mesh(geometry,new THREE.MeshFaceMaterial( materials ));
         this.oilPump.overdraw = true;
         this.oilPump.position.x=10;
         this.oilPump.position.y=00;

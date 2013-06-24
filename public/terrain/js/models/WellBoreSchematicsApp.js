@@ -82,5 +82,6 @@ WellBoreSchematicsApp.prototype.init = function(param)
     this.camera.position.y = -100;
     this.camera.position.z = 100;
 
+    this.scene.add(new THREE.AmbientLight(0x000044));
 }
 
