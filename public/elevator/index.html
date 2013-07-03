@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Synerzip 3D Terrain Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+
+    <script src="js/libs/three.js"></script>
+    <script src="js/libs/jquery-1.6.4.js"></script>
+    <script src="js/libs/jquery.mousewheel.js"></script>
+    <script src="js/libs/RequestAnimationFrame.js"></script>
+    <script src="js/libs/control/TrackballControls.js"></script>
+    <script src="js/libs/csg.js"></script>
+    <script src="js/libs/THREECSG.js"></script>
+    <script src="js/libs/Tween.js"></script>
+
+
+    <script src="js/models/World.js"></script>
+    <script src="js/models/Floor.js"></script>
+    <script src="js/models/Pillar.js"></script>
+    <script src="js/models/Elevator.js"></script>
+
+    <script>
+        $(document).ready(
+            function () {
+                var world = new World();
+                console.log(world);
+                $("#container").append(world.renderer.domElement);
+
+                var group = new THREE.Object3D();
+
+
+                for(var index=0; index<4; index++){
+                    var floor = new Floor(index*40);
+                    group.add(floor.mesh);
+
+                }
+
+
+                var pillar1 = new Pillar(-95,60,45);
+                var pillar2 = new Pillar(95,60,45);
+                var pillar3 = new Pillar(-95,60,-45);
+                var pillar4 = new Pillar(95,60,-45);
+
+
+
+                group.add(pillar1.mesh);
+                group.add(pillar2.mesh);
+                group.add(pillar3.mesh);
+                group.add(pillar4.mesh);
+
+
+                var elevator = new Elevator();
+
+                group.add(elevator.mesh);
+
+                group.position.y=-50;
+                world.scene.add(group);
+                world.animate();
+                elevator.animate();
+                setInterval(function(){
+                    elevator.animate();
+                },30000);
+            }
+        );
+    </script>
+
+</head>
+<body>
+<div id="container" style="width:98%; height:98%; overflow:hidden; position:absolute;"></div>
+
+</body>
+</html>
+
